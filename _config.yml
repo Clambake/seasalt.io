@@ -1,0 +1,14 @@
+name: Sea Salt
+markdown: redcarpet
+highlighter: pygments
+permalink: /post/:title
+paginate_path: /page/:num
+paginate: 7
+exclude:
+  - "*.rb"
+  - "*.coffee"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.sh"
+  - "*.haml"
+  - "Procfile"

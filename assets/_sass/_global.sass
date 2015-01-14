@@ -1,0 +1,143 @@
+html
+  height: 100%
+
+body
+  height: 100%
+  position: relative
+  background-color: white
+  color: #22313F
+  background-color: #fff
+
+  font-size: 14px
+
+  +desktop
+    font-size: 14px
+
+////////////////////// TYPE
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li
+  margin-top: 0px // override normalize
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: normal
+  margin-bottom: 0.5em
+  line-height: 1.5em
+
+h1,
+h2
+  font-size: 1.8em
+  border-bottom: 1px #eaeaea solid
+  padding-bottom: 0.5em
+
+  +desktop
+    font-size: 2.3em
+h3
+  font-size: 1.5em
+  border-bottom: 1px #eaeaea solid
+  padding-bottom: 0.5em
+
+  +desktop
+    font-size: 1.7em
+h4,
+h5,
+h6
+  font-size: 1.2em
+  margin-bottom: 1.3em
+
+p
+  font-size: 1.1em
+  line-height: 1.5em
+  margin-bottom: 1.3em
+
+a,
+a:link,
+a:visited
+  +single-transition(color, 0.05s, ease-in-out)
+  text-decoration: underline
+  outline: none
+  color: $link-color
+
+a:hover,
+a:active
+  color: $link-hover-color
+
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+  text-decoration: none !important
+
+strong
+  font-weight: normal
+
+em
+  font-weight: normal
+
+em strong,
+strong em
+  font-weight: normal
+
+
+ul,
+ol
+  list-style-type: disc
+  margin: 0
+  margin-left: 3em
+  font-size: 1.1em
+  line-height: 1.5em
+  margin-bottom: 1.3em
+  color: #666
+
+li
+  list-style-type: disc
+
+
+blockquote
+  margin: 0
+  margin-left: 2em
+  border-left: 3px #ccc solid
+  padding-left: 1em
+  line-height: 1.5em
+  margin-bottom: 1.3em
+  color: #666
+
+
+a.pill:link,
+a.pill:visited,
+a.pill
+  display: inline-block
+  padding: 10px
+  background-color: #444
+  text-decoration: none
+  color: white
+  +border-radius(4px)
+
+iframe
+  border: none
+  display: block
+
+hr
+  height: 2px
+  background-color: #eaeaea
+  border: none
+
+
+.clear
+  clear: both
+
