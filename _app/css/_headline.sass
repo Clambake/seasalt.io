@@ -1,0 +1,89 @@
+.headline
+  background-color: $cl-brand
+  padding: 2em 0
+  padding-bottom: 2.2em
+  color: white
+  position: relative
+
+  +tablet
+    padding: 3em 0
+    padding-bottom: 3.2em
+
+  +desktop
+    padding: 3em 0
+    padding-bottom: 4em
+
+
+.headline-left
+
+  +tablet
+    margin-bottom: 1em
+
+  +desktop
+    margin-bottom: 0
+    +span-columns(8)
+
+.headline-left-title
+  font-size: 2.1em
+  margin-bottom: 0.2em
+  line-height: 1.2em
+
+  +tablet
+    font-size: 2.5em
+
+  +desktop
+    font-size: 3em
+
+
+.headline-left-desc
+  font-size: 1.2em
+  color: #9ADBFF
+
+  +tablet-desktop
+    font-size: 1.8em
+    margin-bottom: 0
+
+.headline-divider
+  display: none
+  +desktop
+    display: block
+    +span-columns(1)
+
+.headline-divider-inner
+  +span-columns(1) // just to get the width
+  margin: 0
+  float: none
+  display: block
+  position: absolute
+  top: 0px
+  height: 100%
+
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 50%)
+  background-repeat: repeat-y
+  background-size: 1px 1px
+  background-position: center top
+
+.headline-right
+  text-align: center
+  +tablet
+    +span-columns(4 omega)
+  +desktop
+    +span-columns(3 omega)
+
+.headline-right-inner
+  +desktop
+    +span-columns(3) // just to get the width
+    margin: 0
+    float: none
+    display: block
+    position: absolute
+    top: 0px
+    height: 100%
+
+.headline-right-inner .ss-table
+  height: 100%
+
+.headline-cta-desc
+  display: none
+  +desktop
+    display: inline

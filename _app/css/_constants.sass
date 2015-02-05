@@ -1,0 +1,96 @@
+@import compass/css3
+@import compass/css3/user-interface
+@import susy
+
+// SUSY grid defaults
+$total-columns : 12
+$gutter-width  : 1em
+$grid-padding  : $gutter-width
+
+$cl-brand: #22A7F0
+$cl-link: #22A7F0
+$cl-link-focus: #1E96D6
+
+$cl-header-bg: #67C6FA
+
+$cl-btn: #36D7B7
+$cl-btn-focus: #3CE0BF
+
+
+// Media query mixins
+=mobile
+  +at-breakpoint(0em 12 36em)
+
+=tablet
+  +at-breakpoint(36em 12 60em)
+    @content
+
+=desktop
+  $container-width: 75em
+  +with-grid-settings(12,4em,2em,2em)
+    +at-breakpoint(60em 12 lt-ie9)
+      @content
+
+=tablet-desktop
+  +at-breakpoint(36em 12 lt-ie9)
+    @content
+
+=retina
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @content
+
+
+// Animations
+=animate($prop, $time:"", $delay:"", $ease: "")
+  @if $time == ""
+    $time: 0.4s
+
+  @if $delay == ""
+    $delay: 0s
+
+  @if $ease == ""
+    $ease: cubic-bezier(0.475, 0.465, 0.120, 1.005)
+
+  +transition-property($prop)
+  +transition-duration($time)
+  +transition-timing-function($ease)
+  +transition-delay($delay)
+
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+
++keyframes(spin)
+  0%
+    +rotate(0deg)
+  100%
+    +rotate(360deg)
+
+
+// Placeholder styling
+=placeholder
+  &.placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+
+// Absolutely centered
+=absolutely-centered
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  margin: auto
+  position: absolute
+

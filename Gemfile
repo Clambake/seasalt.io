@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem "jekyll"
-  gem 'susy', '< 2.0.0'
   gem 'compass'
-  gem 'coffee-script'
-  gem 'sass'
-  gem 'foreman', '0.62.0'
+  gem 'susy', "<2.0.0"
+  gem 'haml'
   gem 'guard-haml'
-  gem 'guard-coffeescript'
+  gem 'foreman', '0.63.0'
+  gem "jekyll"
+  gem 'jekyll-watch', git: "git@github.com:jekyll/jekyll-watch.git"
 end

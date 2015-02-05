@@ -1,3 +1,8 @@
 .DS_Store
-.sass-cache
+tmp
+.sass-cache/
+.ruby-version
+.fontcustom-manifest.json
+node_modules
+bower_components
 _site
