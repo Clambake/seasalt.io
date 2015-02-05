@@ -438,8 +438,8 @@ th {
 
 @font-face {
   font-family: "fontcustom";
-  src: url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.eot);
-  src: url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.woff) format("woff"), url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.ttf) format("truetype"), url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.svg#fontcustom) format("svg");
+  src: url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.eot");
+  src: url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.woff") format("woff"), url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.ttf") format("truetype"), url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -447,7 +447,7 @@ th {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "fontcustom";
-    src: url(/assets/fonts/fontcustom_c0867cc5adc039ef0dc8dec2893060d4.svg#fontcustom) format("svg");
+    src: url("/assets/fonts/fontcustom_dd832be8c870bb64466b322546d13715.svg#fontcustom") format("svg");
 }
 }
 /* line 23, ../../_app/css/_fontcustom.scss */
@@ -455,8 +455,9 @@ th {
   content: attr(data-icon);
 }
 
-/* line 36, ../../_app/css/_fontcustom.scss */
+/* line 37, ../../_app/css/_fontcustom.scss */
 [data-icon]:before,
+.icon-calendar:before,
 .icon-check:before,
 .icon-chevron-left:before,
 .icon-chevron-right:before,
@@ -482,57 +483,62 @@ th {
   font-smoothing: antialiased;
 }
 
-/* line 51, ../../_app/css/_fontcustom.scss */
+/* line 52, ../../_app/css/_fontcustom.scss */
+.icon-calendar:before {
+  content: "\f10f";
+}
+
+/* line 53, ../../_app/css/_fontcustom.scss */
 .icon-check:before {
   content: "\f102";
 }
 
-/* line 52, ../../_app/css/_fontcustom.scss */
+/* line 54, ../../_app/css/_fontcustom.scss */
 .icon-chevron-left:before {
   content: "\f103";
 }
 
-/* line 53, ../../_app/css/_fontcustom.scss */
+/* line 55, ../../_app/css/_fontcustom.scss */
 .icon-chevron-right:before {
   content: "\f104";
 }
 
-/* line 54, ../../_app/css/_fontcustom.scss */
+/* line 56, ../../_app/css/_fontcustom.scss */
 .icon-close:before {
   content: "\f106";
 }
 
-/* line 55, ../../_app/css/_fontcustom.scss */
+/* line 57, ../../_app/css/_fontcustom.scss */
 .icon-dribbble:before {
   content: "\f107";
 }
 
-/* line 56, ../../_app/css/_fontcustom.scss */
+/* line 58, ../../_app/css/_fontcustom.scss */
 .icon-facebook:before {
   content: "\f108";
 }
 
-/* line 57, ../../_app/css/_fontcustom.scss */
+/* line 59, ../../_app/css/_fontcustom.scss */
 .icon-github:before {
   content: "\f109";
 }
 
-/* line 58, ../../_app/css/_fontcustom.scss */
+/* line 60, ../../_app/css/_fontcustom.scss */
 .icon-instagram:before {
   content: "\f10a";
 }
 
-/* line 59, ../../_app/css/_fontcustom.scss */
+/* line 61, ../../_app/css/_fontcustom.scss */
 .icon-menu:before {
   content: "\f10b";
 }
 
-/* line 60, ../../_app/css/_fontcustom.scss */
+/* line 62, ../../_app/css/_fontcustom.scss */
 .icon-plus:before {
   content: "\f10c";
 }
 
-/* line 61, ../../_app/css/_fontcustom.scss */
+/* line 63, ../../_app/css/_fontcustom.scss */
 .icon-twitter:before {
   content: "\f10e";
 }
@@ -600,7 +606,7 @@ th {
 /* line 1, ../../_app/css/_global.sass */
 body {
   position: relative;
-  background-color: white;
+  background-color: #22a7f0;
   font-family: "proxima-nova-alt-n3", "proxima-nova-alt", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -661,16 +667,17 @@ strong {
   font-family: "proxima-nova-alt-n6", "proxima-nova-alt", sans-serif;
   font-style: normal;
   font-weight: 600;
+  color: #121212;
 }
 
-/* line 46, ../../_app/css/_global.sass */
+/* line 48, ../../_app/css/_global.sass */
 em {
   font-family: "proxima-nova-alt-i3", "proxima-nova-alt", sans-serif;
   font-style: italic;
   font-weight: 300;
 }
 
-/* line 49, ../../_app/css/_global.sass */
+/* line 51, ../../_app/css/_global.sass */
 em strong,
 strong em {
   font-family: "proxima-nova-alt-i6", "proxima-nova-alt", sans-serif;
@@ -678,20 +685,25 @@ strong em {
   font-weight: 600;
 }
 
-/* line 53, ../../_app/css/_global.sass */
+/* line 55, ../../_app/css/_global.sass */
 iframe {
   border: none;
   display: block;
 }
 
-/* line 57, ../../_app/css/_global.sass */
+/* line 59, ../../_app/css/_global.sass */
 .clear:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 62, ../../_app/css/_global.sass */
+/* line 65, ../../_app/css/_global.sass */
+.main {
+  background-color: white;
+}
+
+/* line 68, ../../_app/css/_global.sass */
 .container {
   *zoom: 1;
   max-width: 59em;
@@ -709,7 +721,7 @@ iframe {
   clear: both;
 }
 
-/* line 66, ../../_app/css/_global.sass */
+/* line 72, ../../_app/css/_global.sass */
 .vjack:before {
   content: "";
   display: inline-block;
@@ -718,20 +730,22 @@ iframe {
   margin-right: -0.25em;
 }
 
-/* line 73, ../../_app/css/_global.sass */
+/* line 79, ../../_app/css/_global.sass */
 .vcenter {
   display: inline-block;
   vertical-align: middle;
   width: 99%;
 }
 
-/* line 80, ../../_app/css/_global.sass */
+/* line 86, ../../_app/css/_global.sass */
 a.btn {
+  box-sizing: border-box;
   display: inline-block;
   background-color: #36d7b7;
   color: white;
   text-decoration: none;
   padding: 0.6em;
+  font-size: 1rem;
   text-transform: uppercase;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -744,23 +758,23 @@ a.btn {
   text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
 }
 @media (min-width: 36em) {
-  /* line 80, ../../_app/css/_global.sass */
+  /* line 86, ../../_app/css/_global.sass */
   a.btn {
-    padding: 1em;
+    padding: 0.6em 1em;
   }
 }
 /* line 91, ../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-1.0.9/sass/susy/_media.scss */
 .lt-ie9 a.btn {
-  padding: 1em;
+  padding: 0.6em 1em;
 }
 
-/* line 94, ../../_app/css/_global.sass */
+/* line 102, ../../_app/css/_global.sass */
 a.btn:hover,
 a.btn:focus {
   background-color: #3ce0bf;
 }
 
-/* line 98, ../../_app/css/_global.sass */
+/* line 106, ../../_app/css/_global.sass */
 a.btn-full {
   display: block;
   width: 100%;
@@ -769,12 +783,20 @@ a.btn-full {
   text-align: center;
 }
 
-/* line 105, ../../_app/css/_global.sass */
-a.btn-lg {
-  font-size: 1.2em;
+@media (min-width: 36em) {
+  /* line 113, ../../_app/css/_global.sass */
+  a.btn-lg {
+    font-size: 1.2rem;
+    padding: 1em;
+  }
+}
+/* line 91, ../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 a.btn-lg {
+  font-size: 1.2rem;
+  padding: 1em;
 }
 
-/* line 110, ../../_app/css/_global.sass */
+/* line 121, ../../_app/css/_global.sass */
 .ss-table {
   display: table;
   width: 100%;
@@ -785,12 +807,12 @@ a.btn-lg {
   *border-collapse: expression('separate', cellSpacing = '0px');
 }
 
-/* line 119, ../../_app/css/_global.sass */
+/* line 130, ../../_app/css/_global.sass */
 .ss-table-fill-height {
   height: 100%;
 }
 
-/* line 122, ../../_app/css/_global.sass */
+/* line 133, ../../_app/css/_global.sass */
 .ss-table-row {
   display: table-row;
   width: 100%;
@@ -798,7 +820,7 @@ a.btn-lg {
   padding: 0;
 }
 
-/* line 128, ../../_app/css/_global.sass */
+/* line 139, ../../_app/css/_global.sass */
 .ss-table-auto {
   display: table;
   width: auto;
@@ -809,7 +831,7 @@ a.btn-lg {
   *border-collapse: expression('separate', cellSpacing = '0px');
 }
 
-/* line 137, ../../_app/css/_global.sass */
+/* line 148, ../../_app/css/_global.sass */
 .ss-table-cell {
   display: table-cell;
   vertical-align: middle;
@@ -817,7 +839,7 @@ a.btn-lg {
   padding: 0;
 }
 
-/* line 143, ../../_app/css/_global.sass */
+/* line 154, ../../_app/css/_global.sass */
 .ss-table-cell-big {
   display: table-cell;
   vertical-align: middle;
@@ -826,7 +848,7 @@ a.btn-lg {
   padding: 0;
 }
 
-/* line 150, ../../_app/css/_global.sass */
+/* line 161, ../../_app/css/_global.sass */
 .ss-table-cell-half {
   display: table-cell;
   vertical-align: middle;
@@ -835,18 +857,18 @@ a.btn-lg {
   padding: 0;
 }
 
-/* line 158, ../../_app/css/_global.sass */
+/* line 169, ../../_app/css/_global.sass */
 .content {
   padding: 2em 0;
 }
 @media (min-width: 36em) and (max-width: 60em) {
-  /* line 158, ../../_app/css/_global.sass */
+  /* line 169, ../../_app/css/_global.sass */
   .content {
     padding: 3em 0;
   }
 }
 @media (min-width: 60em) {
-  /* line 158, ../../_app/css/_global.sass */
+  /* line 169, ../../_app/css/_global.sass */
   .content {
     padding: 3em 0;
   }
@@ -856,7 +878,22 @@ a.btn-lg {
   padding: 3em 0;
 }
 
-/* line 167, ../../_app/css/_global.sass */
+/* line 176, ../../_app/css/_global.sass */
+.content-section {
+  margin-bottom: 2em;
+}
+@media (min-width: 36em) {
+  /* line 176, ../../_app/css/_global.sass */
+  .content-section {
+    margin-bottom: 3.5em;
+  }
+}
+/* line 91, ../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .content-section {
+  margin-bottom: 3.5em;
+}
+
+/* line 182, ../../_app/css/_global.sass */
 .content-section-title {
   font-size: 2em;
   color: #22a7f0;
@@ -864,7 +901,7 @@ a.btn-lg {
   border-bottom: 1px #22a7f0 solid;
 }
 @media (min-width: 36em) {
-  /* line 167, ../../_app/css/_global.sass */
+  /* line 182, ../../_app/css/_global.sass */
   .content-section-title {
     font-size: 2.8em;
   }
@@ -874,12 +911,12 @@ a.btn-lg {
   font-size: 2.8em;
 }
 
-/* line 176, ../../_app/css/_global.sass */
+/* line 191, ../../_app/css/_global.sass */
 .content-section-offering {
   margin-bottom: 2em;
 }
 
-/* line 179, ../../_app/css/_global.sass */
+/* line 194, ../../_app/css/_global.sass */
 .content-section-offering-info {
   width: 83.05085%;
   float: left;
@@ -891,7 +928,7 @@ a.btn-lg {
   font-size: 1.1em;
 }
 @media (min-width: 36em) {
-  /* line 179, ../../_app/css/_global.sass */
+  /* line 194, ../../_app/css/_global.sass */
   .content-section-offering-info {
     width: 66.10169%;
     float: left;
@@ -910,12 +947,12 @@ a.btn-lg {
   font-size: 1.5em;
 }
 
-/* line 191, ../../_app/css/_global.sass */
+/* line 207, ../../_app/css/_global.sass */
 .content-section-offering-info p:last-child {
   margin-bottom: 0;
 }
 
-/* line 194, ../../_app/css/_global.sass */
+/* line 210, ../../_app/css/_global.sass */
 .content-section-offering-label {
   display: none;
   background-image: linear-gradient(to bottom, #c7c7c7 50%, #c7c7c7 50%);
@@ -925,7 +962,7 @@ a.btn-lg {
   text-align: right;
 }
 @media (min-width: 36em) {
-  /* line 194, ../../_app/css/_global.sass */
+  /* line 210, ../../_app/css/_global.sass */
   .content-section-offering-label {
     display: block;
     width: 23.72881%;
@@ -943,7 +980,7 @@ a.btn-lg {
   display: inline;
 }
 
-/* line 205, ../../_app/css/_global.sass */
+/* line 221, ../../_app/css/_global.sass */
 .content-section-offering-label-digit {
   display: inline-block;
   border: 1px solid #c7c7c7;
@@ -961,6 +998,76 @@ a.btn-lg {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 36em) {
+  /* line 235, ../../_app/css/_global.sass */
+  .content-section-workshop-right {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 91, ../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .content-section-workshop-right {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 239, ../../_app/css/_global.sass */
+.team-member-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 245, ../../_app/css/_global.sass */
+.footer {
+  text-align: right;
+  background-color: #22a7f0;
+  padding: 2em 0;
+  padding-bottom: 2.2em;
+  color: white;
+  position: relative;
+  background-image: url('/assets/media/footer-waves.png');
+  background-size: 510px 12px;
+  background-repeat: repeat-x;
+  background-position: center top;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 245, ../../_app/css/_global.sass */
+  .footer {
+    background-image: url('/assets/media/footer-waves@2x.png');
+  }
+}
+@media (min-width: 36em) and (max-width: 60em) {
+  /* line 245, ../../_app/css/_global.sass */
+  .footer {
+    padding: 3em 0;
+    padding-bottom: 3.2em;
+  }
+}
+@media (min-width: 60em) {
+  /* line 245, ../../_app/css/_global.sass */
+  .footer {
+    padding: 3em 0;
+    padding-bottom: 4em;
+  }
+}
+/* line 91, ../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-1.0.9/sass/susy/_media.scss */
+.lt-ie9 .footer {
+  padding: 3em 0;
+  padding-bottom: 4em;
+}
+
+/* line 269, ../../_app/css/_global.sass */
+.footer a {
+  color: white;
 }
 
 /* line 3, ../../_app/css/_header.sass */
