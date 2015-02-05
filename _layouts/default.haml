@@ -4,6 +4,9 @@
   %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
   %link{ rel: "stylesheet", href: "/assets/css/screen.css" }
 
+  %title {{ page.title }}
+  %meta{ type: :description, content: "We partner with early-stage entrepreneurs to get ideas off the ground."}
+
   %script{ type: "text/javascript", src: "//use.typekit.net/ygs4xuv.js" }
   :javascript
     try{Typekit.load();}catch(e){}
@@ -23,12 +26,12 @@
         %li
           %a{ href: "/" } Home
         %li
-          %a{ href: "/" } Products
+          %a{ href: "/products" } Products
         %li
-          %a{ href: "/" } Blog
+          %a{ href: "/blog" } Blog
 
-  .main
-    {{content}}
+
+  {{content}}
   %footer.footer
     .container
       .footer-content
@@ -46,16 +49,15 @@
           %br
           %a{ href: "mailto:hello@seasalt.io" } hello@seasalt.io
 
-
-
   :javascript
-    //(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    //(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    //m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    //})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    //
-    //ga('create', '', '');
-    //ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59424309-1', 'auto');
+    ga('send', 'pageview');
+
 
   %script{ src: "/assets/js/vendor.js" }
   %script{ src: "/assets/js/app.js" }

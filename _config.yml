@@ -1,11 +1,6 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: ""
-baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+
+url: "http://seasalt.io"
 
 # Build settings
 markdown: redcarpet
