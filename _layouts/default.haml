@@ -7,6 +7,8 @@
   %title {{ page.title }}
   %meta{ type: :description, content: "We partner with early-stage entrepreneurs to get ideas off the ground."}
 
+  %link{ rel: "shortcut icon", href: "/assets/media/favicon.png"}
+
   %script{ type: "text/javascript", src: "//use.typekit.net/ygs4xuv.js" }
   :javascript
     try{Typekit.load();}catch(e){}
@@ -20,15 +22,15 @@
         %a.hdr-logo{ href: "/" }
           %span sea/salt
 
-      %a.hdr-menu-toggle.icon-menu.js-menu-open{ href: "#"}
-      %a.hdr-menu-toggle.icon-close.js-menu-close{ href: "#"}
-      %ul.hdr-menu{role: :menu}
-        %li
-          %a{ href: "/" } Home
-        %li
-          %a{ href: "/products" } Products
-        %li
-          %a{ href: "/blog" } Blog
+      / %a.hdr-menu-toggle.icon-menu.js-menu-open{ href: "#"}
+      / %a.hdr-menu-toggle.icon-close.js-menu-close{ href: "#"}
+      / %ul.hdr-menu{role: :menu}
+      /   %li
+      /     %a{ href: "/" } Home
+      /   %li
+      /     %a{ href: "/products" } Products
+      /   %li
+      /     %a{ href: "/blog" } Blog
 
 
   {{content}}
