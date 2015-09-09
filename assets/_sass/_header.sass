@@ -1,0 +1,34 @@
+.hdr-left
+
+.hdr
+  background-color: #F4F4F4
+  +vertical-spacing(padding, 1)
+
+.hdr-left
+  +span(5)
+
+a.hdr-logo,
+a.hdr-logo:visited
+  font-size: 17px
+  +sans
+  text-transform: uppercase
+  letter-spacing: 0.3em
+  color: $black
+
+a.hdr-logo:hover
+  color: #989898
+
+span.hdr-logo-venture
+  display: none
+  +tablet-up
+    display: inline
+
+.hdr-right
+  text-align: right
+  +span(5 omega)
+
+a.hdr-contact
+  font-size: 17px
+  +sans
+  text-transform: uppercase
+

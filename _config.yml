@@ -1,30 +1,30 @@
 # Site settings
-
+title: Sea/Salt Ventures
+email: hello@seasalt.io
+description: We help founders launch their startup ideas span quickly and cost-effectively
+baseurl: "http://seasalt.io"
 url: "http://seasalt.io"
+twitter_username: seasalt_io
+
+ga_id: "UA-59424309-1"
+typekit_id: "ygs4xuv"
 
 # Build settings
 markdown: redcarpet
-permalink: pretty
+highlighter: pygments
 
 exclude:
-  - '.DS_Store'
   - '*.haml'
-  - 'bower_components'
-  - 'node_modules'
   - '*.rb'
   - '*.coffee'
+  - '*.yml'
+  - '.fontcustom-manifest.json'
   - 'Guardfile'
   - 'Procfile'
   - 'Gemfile'
   - 'Gemfile.lock'
-  - '*.yml'
-  - 'app'
-  - 'bower.json'
+  - 'Readme.md'
+  - 'bower_components'
+  - 'node_modules'
+  - 'gulpfile.js'
   - 'package.json'
-  - 'Gruntfile.coffee'
-  - '.fontcustom-manifest.json'
-
-
-defaults:
-  values:
-    layout: "default"

@@ -1,1 +1,0 @@
-(function(){$(".js-menu-open").bind("click",function(){return $(".hdr").addClass("hdr-menu-open")}),$(".js-menu-close").bind("click",function(){return $(".hdr").removeClass("hdr-menu-open")})}).call(this),function(){window.__ga_track_event=function(a){return"undefined"!=typeof ga&&null!==ga?(ga("send","event",a.category,a.action,a.label,a.value),!0):!1}}.call(this);

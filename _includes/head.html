@@ -1,0 +1,15 @@
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <link href='/assets/media/favicon.png' rel='shortcut icon'>
+  <meta content='{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}' name='description'>
+  <script src='//use.typekit.net/{{site.typekit_id}}.js'></script>
+  <script>
+    try{Typekit.load({ async: true });}catch(e){}
+  </script>
+  <link href='/assets/css/main.css' rel='stylesheet'>
+  <link href='{{ page.url | replace:"index.html","" | prepend: site.baseurl }}' rel='canonical'>
+</head>

@@ -1,0 +1,42 @@
+// Susy's sweet box-sizing mixin
++border-box-sizing
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure
+  margin: 0
+  padding: 0
+  +serif
+  color: $black
+
+body
+  +sans-lt
+  background-color: white
+
+h1, h2, h3, h4, h5, h6
+  +sans-semi
+
+h2, h3, h4, h5, h6
+  text-transform: uppercase
+
+.section-title
+  text-align: center
+  +vertical-spacing(margin, 0, 1)
+
+a
+  color: $black
+  text-decoration: none
+
+a:hover
+  color: #989898
+
+img
+  display: inline-block
+  max-width: 100%
+
+.container
+  +container
+  padding-left: $grid-padding
+  padding-right: $grid-padding
+
+
