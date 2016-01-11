@@ -94,3 +94,10 @@ gulp.task('default', [
   'browser-sync',
   'watch'
 ]);
+
+gulp.task('build', [
+  'haml',
+  'sass',
+  'coffee',
+  'uglify'
+]);
