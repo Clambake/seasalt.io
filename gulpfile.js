@@ -1,5 +1,4 @@
 var gulp         = require('gulp');
-var haml         = require('gulp-ruby-haml');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
@@ -8,16 +7,6 @@ var coffee       = require('gulp-coffee');
 var uglify       = require('gulp-uglify');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
-
-gulp.task('haml', function() {
-  gulp.src('_haml/**/*.haml')
-    .pipe(haml())
-    .on('error', function (err) {
-      console.log(err);
-      this.emit('end');
-    })
-    .pipe(gulp.dest('./'));
-});
 
 gulp.task('sass', function() {
   gulp.src('assets/_sass/**/*.sass')
@@ -79,7 +68,6 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('_haml/**/*.haml', ['haml']);
   gulp.watch('assets/_sass/**/*.sass', ['sass']);
   gulp.watch('assets/_coffee/**/*.coffee', ['coffee']);
 
@@ -87,7 +75,6 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', [
-  'haml',
   'sass',
   'coffee',
   'uglify',
@@ -96,7 +83,6 @@ gulp.task('default', [
 ]);
 
 gulp.task('build', [
-  'haml',
   'sass',
   'coffee',
   'uglify'

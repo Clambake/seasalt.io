@@ -77,7 +77,6 @@ section.recent
   +push(1)
   position: relative
   margin-bottom: 2em
-  border: 1px solid
   transition: box-shadow 0.2s ease-in-out
 
   +tablet
@@ -151,39 +150,57 @@ section.recent
 
 .recent-item-pingsy
   background-color: #FF62A3
-  border-color: #F2448D
+    // border-color: #F2448D
   .recent-item-shape
     fill: #F2448D
 
 .recent-item-split
   background-color: #5681CB
-  border-color: #547EC7
+    // border-color: #547EC7
   .recent-item-shape
     fill: #2E5DAD
 
 .recent-item-lf
   background-color: #FF766F
-  border-color: #F75E56
+    // border-color: #F75E56
   .recent-item-shape
     fill: #EC544C
 
 .recent-item-kipper
   background-color: #36B7AD
-  border-color: #2CA197
+    // border-color: #2CA197
   .recent-item-shape
     fill: #2CA197
 
 .recent-item-votr
   background-color: #33B0EE
-  border-color: #34AEEB
+    // border-color: #34AEEB
   .recent-item-shape
     fill: #2B9DD6
 
 .recent-item-madhat
   background-color: #E85743
-  border-color: #E5533F
+    // border-color: #E5533F
   .recent-item-shape
     fill: #D44531
+
+.recent-item-ifttt
+  background-color: #3E82F7
+    // border-color: #0C7CDD
+  .recent-item-shape
+    fill: #0C7AD8
+
+.recent-item-tripky
+  background-color: #EF5350
+    // border-color: #E3413E
+  .recent-item-shape
+    fill: #E03C38
+
+.recent-item-happiness
+  background-color: #FF8F00
+    // border-color: #EA8214
+  .recent-item-shape
+    fill: #D87D1C
 
 // Recent CTA
 
@@ -227,6 +244,9 @@ section.recent
   +vertical-spacing(padding, 1.5, 1.5)
 
 .team-members
+  +desktop
+    +span(10)
+    +push(1)
 
 .team-member
   text-align: center
@@ -238,7 +258,7 @@ section.recent
 
   +desktop
     margin-bottom: 0
-    +span(4)
+    +span(5 of 10)
     +push(0)
 
 .team-member:last-child
@@ -266,7 +286,6 @@ img.team-member-img
   text-decoration: underline
 
 .team-member-role:after
-
   content: ""
   background-color: #ccc
   position: absolute
