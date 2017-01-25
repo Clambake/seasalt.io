@@ -1,14 +1,15 @@
-<header class='site-header'>
-  <div class='wrapper'>
-    <a class='site-title' href='{{ site.baseurl }}/'>{{ site.title }}</a>
-    <nav class='site-nav'>
-      <div class='trigger'>
-        {% for page in site.pages %}
-        {% if page.title %}
-        <a class='page-link' href='{{ page.url | prepend: site.baseurl }}'>{{ page.title }}</a>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-  </div>
+<header class="header">
+	<div class="header-brand">
+		<a class="header-brand-link" href="/">
+			sea/salt
+		</a>
+	</div>
+	<nav class="header-nav">
+		<a class="header-nav-link" href="https://blog.seasalt.io/" title="Blog">
+			Blog
+		</a>
+		<a class="header-nav-link" href="mailto:hello@seasalt.io" title="Contact">
+			Contact
+		</a>
+	</nav>
 </header>

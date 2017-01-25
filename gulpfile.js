@@ -3,13 +3,13 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat       = require('gulp-concat');
-var coffee       = require('gulp-coffee');
-var uglify       = require('gulp-uglify');
-var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions'],
+};
 
 gulp.task('sass', function() {
-  gulp.src('assets/_sass/**/*.sass')
+  gulp.src('assets/_sass/**/*')
     .pipe(sourcemaps.init())
     .pipe(sass({
       indentedSyntax: true,
@@ -18,72 +18,22 @@ gulp.task('sass', function() {
       includePaths: [
         'node_modules/susy/sass/'
       ]
-    }))
-    .pipe(autoprefixer())
+    }).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/css/'))
-    .pipe(reload({stream: true}));
-});
-
-gulp.task('coffee', function() {
-  gulp.src([
-    // This is like the Rails asset pipeline JS manifest
-    'assets/_coffee/global.coffee',
-  ])
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.coffee'))
-    .pipe(coffee({bare: true}).on('error', function (err) {
-      console.log(err);
-      this.emit('end');
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/js/'));
-});
-
-gulp.task('uglify', function() {
-  return gulp.src('assets/js/main.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'));
-});
-
-gulp.task('browser-sync', function() {
-  browserSync({
-    notify: false,
-    files: [
-      '_site/assets/css/*.css',
-      '_site/assets/media/**',
-      '_site/assets/js/**/*.js',
-      '_site/**/*.html'
-    ],
-    ghostMode: {
-      clicks: true,
-      forms: true
-    },
-    open: false,
-    logLevel: 'debug',
-    server: {
-      baseDir: '_site'
-    }
-  });
+    .pipe(gulp.dest('assets/css/'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('assets/_sass/**/*.sass', ['sass']);
-  gulp.watch('assets/_coffee/**/*.coffee', ['coffee']);
-
 });
 
 // Default Task
 gulp.task('default', [
   'sass',
-  'coffee',
-  'uglify',
-  'browser-sync',
   'watch'
 ]);
 
 gulp.task('build', [
   'sass',
-  'coffee',
-  'uglify'
 ]);

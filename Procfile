@@ -1,2 +1,2 @@
-jekyll: bundle exec jekyll build --trace --watch --drafts
+jekyll: bundle exec jekyll serve
 gulp: gulp

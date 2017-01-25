@@ -1,34 +1,44 @@
-.hdr-left
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-top: 1em
 
-.hdr
-  background-color: #F4F4F4
-  +vertical-spacing(padding, 1)
+.header-brand
+	flex: 1
+	white-space: nowrap
 
-.hdr-left
-  +span(6)
+.header-brand-link
+	+bold
+		
+	&::before
+		content: "# "
 
-a.hdr-logo,
-a.hdr-logo:visited
-  font-size: 16px
-  +sans
-  text-transform: uppercase
-  letter-spacing: 0.2em
-  color: $black
+.header-nav
+	flex: 1
+	white-space: nowrap
+	text-align: right
+	display: flex
+	align-items: center
+	justify-content: flex-end
 
-a.hdr-logo:hover
-  color: #989898
+a.header-nav-link
+	color: $color-text-light
+	position: relative
+	display: block
 
-span.hdr-logo-venture
-  display: none
-  +tablet-up
-    display: inline
+	&:hover
+		color: $color-text-dark
 
-.hdr-right
-  text-align: right
-  +span(6 omega)
-  white-space: nowrap
+	+ .header-nav-link
+		margin-left: 1em
 
-a.hdr-contact
-  font-size: 17px
-  +sans
-  text-transform: uppercase
+		&::after
+			content: " "
+			background-color: $color-text-light
+			position: absolute
+			left: -0.5em
+			top: 50%
+			margin-top: -5px
+			height: 10px
+			width: 1px

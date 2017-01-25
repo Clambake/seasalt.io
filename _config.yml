@@ -1,13 +1,11 @@
 # Site settings
 title: Sea/Salt
 email: hello@seasalt.io
-description: It all starts with a product.
-baseurl: "http://seasalt.io"
+description:  we embed within early-stage companies as a dedicated product team
+# baseurl: "http://seasalt.io"
 url: "http://seasalt.io"
-twitter_username: seasalt_io
 
 ga_id: "UA-59424309-1"
-typekit_id: "ygs4xuv"
 
 # Build settings
 markdown: redcarpet

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'hackregular';
+    src: url('/assets/media/fonts/hack-regular-webfont.woff2') format('woff2'),
+         url('/assets/media/fonts/hack-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hackregularoblique';
+    src: url('/assets/media/fonts/hack-regularoblique-webfont.woff2') format('woff2'),
+         url('/assets/media/fonts/hack-regularoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hackbold';
+    src: url('/assets/media/fonts/hack-bold-webfont.woff2') format('woff2'),
+         url('/assets/media/fonts/hack-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hackboldoblique';
+    src: url('/assets/media/fonts/hack-boldoblique-webfont.woff2') format('woff2'),
+         url('/assets/media/fonts/hack-boldoblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin reg {
+  font-family: 'hackregular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin reg-it {
+  font-family: 'hackregularoblique';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin bold {
+  font-family: 'hackbold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin bold-it {
+  font-family: 'hackboldoblique';
+  font-weight: normal;
+  font-style: normal;
+}
