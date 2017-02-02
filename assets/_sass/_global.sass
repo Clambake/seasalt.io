@@ -14,9 +14,11 @@ body
 	background-color: white
 	text-transform: lowercase
 	font-size: 15px
+	padding: 2em 0
 
 	+desktop
 		font-size: 16px
+		padding: 3em 0
 
 h1, h2, h3, h4, h5, h6
 	+bold
@@ -58,6 +60,12 @@ img
 
 .margins-on > * + *
 	margin-top: 2em
+
+.margins-big > * + *
+	margin-top: 2em
+
+	+tablet-up
+		margin-top: 3em
 
 .margins-compact > * + *
 	margin-top: 0.75em

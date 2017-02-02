@@ -1,7 +1,10 @@
 .home-intro p
+	line-height: 2em
+	+tablet
+		font-size: 1.1em
+		line-height: 2em
 	+desktop
 		font-size: 1.2em
-		line-height: 2em
 
 .home-who
 	+desktop
@@ -23,22 +26,20 @@
 .home-who-ind-photo
 	flex: 0 0 60px
 	margin-right: 1em
+	width: 60px
 
-	+desktop
+	+tablet-up
 		flex: 0 0 80px
+		width: 80px
 
 	img
-		width: 60px
-
-		+desktop
-			width: 80px
-
-
+		width: 100%
 
 .home-who-ind-info
 
 .home-who-ind-info-name
 	+bold
+	margin-bottom: 0.5em
 
 .home-who-ind-info-desc
 	font-size: 0.9em
