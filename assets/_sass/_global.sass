@@ -1,5 +1,7 @@
-// Susy's sweet box-sizing mixin
-+border-box-sizing
+*,
+*::after,
+*::before
+	box-sizing: border-box
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -9,6 +11,7 @@ dl, dd, ol, ul, figure
 	+reg
 	color: $color-text-dark
 	line-height: 1.5
+	letter-spacing: -0.02em
 
 body
 	background-color: white
@@ -47,8 +50,11 @@ img
 	display: inline-block
 	max-width: 100%
 
+$max-width : 76.5em  // 1224px
+
 .container
-	+container
+	margin: 0 auto
+	max-width: $max-width
 	padding-left: $grid-padding
 	padding-right: $grid-padding
 

@@ -1,7 +1,7 @@
 # Site settings
 title: Sea/Salt
 email: hello@seasalt.io
-description:  we embed within early-stage companies as a dedicated product team
+description:  the technology team that can do anything. we help strong operators get new companies off the ground.
 # baseurl: "http://seasalt.io"
 url: "http://seasalt.io"
 
@@ -10,6 +10,9 @@ ga_id: "UA-59424309-1"
 # Build settings
 markdown: redcarpet
 highlighter: pygments
+
+sass:
+  sass_dir: assets/_sass
 
 exclude:
   - '*.haml'
